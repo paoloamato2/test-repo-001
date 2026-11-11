@@ -3,4 +3,4 @@
 
 def calculate_total(subtotal: float, tax_rate: float) -> float:
     """Restituisce il totale applicando l'imposta indicata."""
-    return subtotal + tax_rate
+    return subtotal + subtotal * tax_rate
