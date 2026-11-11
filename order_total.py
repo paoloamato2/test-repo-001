@@ -8,4 +8,4 @@ def calculate_total(subtotal: float, tax_rate: float) -> float:
 
 def calculate_discount(price: float, discount_rate: float) -> float:
     """Return the price after applying the specified discount rate."""
-    return price - discount_rate
+    return price - price * discount_rate

@@ -10,8 +10,8 @@ class CalculateTotalTests(unittest.TestCase):
     def test_calculate_total_applies_tax_rate(self) -> None:
         self.assertEqual(calculate_total(100.0, 0.22), 122.0)
 
-    def test_calculate_discount_treats_rate_as_fixed_amount(self) -> None:
-        self.assertEqual(calculate_discount(100.0, 0.2), 99.8)
+    def test_calculate_discount_applies_rate_as_percentage(self) -> None:
+        self.assertEqual(calculate_discount(100.0, 0.2), 80.0)
 
 
 if __name__ == "__main__":
