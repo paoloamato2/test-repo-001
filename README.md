@@ -1,16 +1,16 @@
 empty
-# Esempio Python con bug intenzionale
+# Python Example with an Intentional Bug
 
-Questo piccolo progetto Python 3.x calcola il prezzo finale di un ordine.
-`calculate_total` applica l'imposta come percentuale. `calculate_discount`
-contiene invece deliberatamente un errore: sottrae il tasso di sconto come
-importo fisso anziché calcolarlo come percentuale del prezzo.
+This small Python 3.x project calculates the final price of an order.
+`calculate_total` applies tax as a percentage. `calculate_discount`
+deliberately contains a bug: it subtracts the discount rate as a fixed amount
+instead of calculating it as a percentage of the price.
 
-Esegui i test con:
+Run the tests with:
 
 ```bash
 python3 -m unittest discover -s tests -v
 ```
 
-Il test `test_calculate_discount_treats_rate_as_fixed_amount` documenta
-deliberatamente il comportamento errato di `calculate_discount`.
+The `test_calculate_discount_treats_rate_as_fixed_amount` test deliberately
+documents the incorrect behavior of `calculate_discount`.

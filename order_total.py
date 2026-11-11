@@ -1,11 +1,11 @@
-"""Funzioni per il calcolo del totale di un ordine."""
+"""Functions for calculating order totals."""
 
 
 def calculate_total(subtotal: float, tax_rate: float) -> float:
-    """Restituisce il totale applicando l'imposta indicata."""
+    """Return the total after applying the specified tax rate."""
     return subtotal + subtotal * tax_rate
 
 
 def calculate_discount(price: float, discount_rate: float) -> float:
-    """Restituisce il prezzo dopo lo sconto indicato."""
+    """Return the price after applying the specified discount rate."""
     return price - discount_rate
