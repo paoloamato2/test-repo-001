@@ -2,8 +2,9 @@ empty
 # Esempio Python con bug intenzionale
 
 Questo piccolo progetto Python 3.x calcola il prezzo finale di un ordine.
-Contiene deliberatamente un errore in `calculate_total`: l'imposta viene
-aggiunta come importo fisso anziché calcolata come percentuale.
+`calculate_total` applica l'imposta come percentuale. `calculate_discount`
+contiene invece deliberatamente un errore: sottrae il tasso di sconto come
+importo fisso anziché calcolarlo come percentuale del prezzo.
 
 Esegui i test con:
 
@@ -11,5 +12,5 @@ Esegui i test con:
 python3 -m unittest discover -s tests -v
 ```
 
-Il test `test_calculate_total_applies_tax_rate` fallisce intenzionalmente e
-riproduce il problema descritto nell'issue GitHub associato.
+Il test `test_calculate_discount_treats_rate_as_fixed_amount` documenta
+deliberatamente il comportamento errato di `calculate_discount`.
