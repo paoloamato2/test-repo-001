@@ -1,6 +1,6 @@
 import unittest
 
-from order_total import calculate_total
+from order_total import calculate_discount, calculate_total
 
 
 class CalculateTotalTests(unittest.TestCase):
@@ -9,6 +9,9 @@ class CalculateTotalTests(unittest.TestCase):
 
     def test_calculate_total_applies_tax_rate(self) -> None:
         self.assertEqual(calculate_total(100.0, 0.22), 122.0)
+
+    def test_calculate_discount_applies_rate_as_percentage(self) -> None:
+        self.assertEqual(calculate_discount(100.0, 0.2), 80.0)
 
 
 if __name__ == "__main__":

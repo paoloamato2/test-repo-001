@@ -1,15 +1,14 @@
 empty
-# Esempio Python con bug intenzionale
+# Python Order Total Example
 
-Questo piccolo progetto Python 3.x calcola il prezzo finale di un ordine.
-Contiene deliberatamente un errore in `calculate_total`: l'imposta viene
-aggiunta come importo fisso anziché calcolata come percentuale.
+This small Python 3.x project calculates the final price of an order.
+`calculate_total` applies tax as a percentage, and `calculate_discount`
+subtracts the discount as a percentage of the price.
 
-Esegui i test con:
+Run the tests with:
 
 ```bash
 python3 -m unittest discover -s tests -v
 ```
 
-Il test `test_calculate_total_applies_tax_rate` fallisce intenzionalmente e
-riproduce il problema descritto nell'issue GitHub associato.
+The tests cover percentage-based tax and discount calculations.
